@@ -1,6 +1,6 @@
-# Welcome to your CDK TypeScript project
+# Securely Connecting to an AWS Redshift Cluster (not publicly accessible) in your VPC by using EC2 Instance Connect Endpoint over the Internet without the need of a VPN/Bastion host and SSH
 
-This is a blank project for CDK development with TypeScript.
+This is a CDK project written in TypeScript that provisions a Redshift Cluster, EC2 Instance Connect Endpoint, CloudFormation Custom Resources/Lambda, IAM Roles/Policies, Security Groups, Route Tables, Private Subnets, and a VPC.
 
 The `cdk.json` file tells the CDK Toolkit how to execute your app.
 

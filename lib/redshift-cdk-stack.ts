@@ -40,10 +40,10 @@ export class RedshiftCdkStack extends cdk.Stack {
       allowAllOutbound: false, // Set allowAllOutbound to false for customized outbound rules
     });
 
-    // Add inbound rule to allow SSH from Instance Connect SG to EC2 SG
+    // Add inbound rule to allow traffic from Instance Connect SG to Redshift SG
     redshiftSG.addIngressRule(instanceConnectSG, ec2.Port.tcp(3389), 'Allow access from Instance Connect SG');
 
-    // Add outbound rule to allow SSH from Instance Connect SG to EC2 SG
+    // Add outbound rule to allow traffic from Instance Connect SG to Redshift SG
     instanceConnectSG.addEgressRule(redshiftSG, ec2.Port.tcp(3389), 'Allow access to Redshift SG');
 
     // Create the custom resource lambda function
